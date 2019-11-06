@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'Refeicões Allparts',
+    'title' => 'Gestão de Ocorrências',
 
     'title_prefix' => '',
 
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '</b>Refeições<b>Allparts',
+    'logo' => '</b>Gestão<b>Ocorrências',
 
     'logo_mini' => '<b>A</b>LT',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'red',
 
     /*
     |--------------------------------------------------------------------------
