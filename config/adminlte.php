@@ -135,13 +135,13 @@ return [
 
         [
                     'text' => 'Matérias',
-                    'icon' => 'far fa-id-badge',
+                    'icon' => 'fas fa-graduation-cap',
                     'route' => 'materias.index',
                  ],
 
                 [
                     'text' => 'Turmas',
-                    'icon' => 'fas fa-bezier-curve',
+                    'icon' => 'fas fa-users',
                     'route' => 'turmas.index',
                 ],
 
@@ -153,14 +153,13 @@ return [
 
                 [
                     'text' => 'Ocorrências',
-                   // 'url'  => '/ocorrencias',
                     'icon' => 'fas fa-clipboard-list',
                     'route' => 'ocorrencias.index',
                 ],
 
                 [
                     'text' => 'Tipos de Ocorrências',
-                    'icon' => 'fas fa-user-tie',
+                    'icon' => 'fas fa-list',
                     'route' => 'tiposocorrencias.index',
                 ],
             ],
