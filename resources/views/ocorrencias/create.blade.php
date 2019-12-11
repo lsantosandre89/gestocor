@@ -65,14 +65,13 @@
             </div>
 
             <input type="hidden" id="users_id" name="users_id" value="{{ $user->id }}">
-
         </div>
 
         <div class="panel-footer">
-                <a href="{{ route('ocorrencias.index') }}" class="btn btn-default">Cancelar</a>
-                <button type="submit" class="btn btn-success">Gravar</button>
+            <a href="{{ route('ocorrencias.index') }}" class="btn btn-default">Cancelar</a>
+            <button type="submit" class="btn btn-success">Gravar</button>
 
-            </div>
+        </div>
 </form>
 
 @stop

@@ -69,10 +69,9 @@
         </div>
 
         <div class="panel-footer">
-                <a href="{{ route('ocorrencias.index') }}" class="btn btn-default">Cancelar</a>
-                <button type="submit" class="btn btn-success">Gravar</button>
-
-            </div>
+            <a href="{{ route('ocorrencias.index') }}" class="btn btn-default">Cancelar</a>
+            <button type="submit" class="btn btn-success">Gravar</button>
+        </div>
 </form>
 
 @stop

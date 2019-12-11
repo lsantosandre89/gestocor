@@ -37,14 +37,13 @@
                     </select>
                 </div>
             </div>
-
-            <div class="panel-footer">
+        </div>
+        
+        <div class="panel-footer">
                 <a href="{{ route('alunos.index') }}" class="btn btn-default">Cancelar</a>
                 <button type="submit" class="btn btn-success">Gravar</button>
 
             </div>
-
-        </div>
 </form>
 
 @stop

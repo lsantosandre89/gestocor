@@ -22,14 +22,13 @@
                 <label for="ra">Nome</label>
                 <input required type="text" id="nome" name="nome" class="form-control" value="{{ $materia->nome }}" placeholder="Ex.: Matemática">
             </div>
+        </div>
 
-            <div class="panel-footer">
+        <div class="panel-footer">
                 <a href="{{ route('materias.index') }}" class="btn btn-default">Cancelar</a>
                 <button type="submit" class="btn btn-success">Gravar</button>
 
             </div>
-
-        </div>
 </form>
 @stop
 
