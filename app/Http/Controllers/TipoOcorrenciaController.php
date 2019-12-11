@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\TipoOcorrencia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TipoOcorrenciaController extends Controller
 {
@@ -14,7 +15,8 @@ class TipoOcorrenciaController extends Controller
      */
     public function index()
     {
-        //
+        $tiposocorrencias = TipoOcorrencia::all();
+        return view('tiposocorrencias.index', compact('tiposocorrencias'));
     }
 
     /**
@@ -24,7 +26,8 @@ class TipoOcorrenciaController extends Controller
      */
     public function create()
     {
-        //
+        $tiposocorrencias = TipoOcorrencia::all();
+        return view('tiposocorrencias.create', compact('tiposocorrencias'));
     }
 
     /**
@@ -35,7 +38,8 @@ class TipoOcorrenciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        TipoOcorrencia::create($request->all());
+        return redirect()->route('tiposocorrencias.index');
     }
 
     /**
@@ -44,9 +48,10 @@ class TipoOcorrenciaController extends Controller
      * @param  \App\TipoOcorrencia  $tipoOcorrencia
      * @return \Illuminate\Http\Response
      */
-    public function show(TipoOcorrencia $tipoOcorrencia)
+    public function show($id)
     {
-        //
+        $tipoocorrencia = TipoOcorrencia::find($id);
+        return view('tiposocorrencias.show',compact('tipoocorrencia'));
     }
 
     /**
@@ -55,9 +60,10 @@ class TipoOcorrenciaController extends Controller
      * @param  \App\TipoOcorrencia  $tipoOcorrencia
      * @return \Illuminate\Http\Response
      */
-    public function edit(TipoOcorrencia $tipoOcorrencia)
+    public function edit($id)
     {
-        //
+        $tipoocorrencia = TipoOcorrencia::find($id);
+        return view('tiposocorrencias.edit',compact('tipoocorrencia'));
     }
 
     /**
@@ -67,9 +73,15 @@ class TipoOcorrenciaController extends Controller
      * @param  \App\TipoOcorrencia  $tipoOcorrencia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TipoOcorrencia $tipoOcorrencia)
+    public function update(Request $request, $id)
     {
-        //
+        DB::table('tiposocorrencias')
+            ->where('id',$id)
+            ->update([
+                'descricao'=>$request->descricao,
+            ]);
+            
+        return redirect()->route('tiposocorrencias.index');
     }
 
     /**
@@ -78,8 +90,9 @@ class TipoOcorrenciaController extends Controller
      * @param  \App\TipoOcorrencia  $tipoOcorrencia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TipoOcorrencia $tipoOcorrencia)
+    public function destroy($id)
     {
-        //
+        TipoOcorrencia::destroy($id);
+        return redirect()->route('tiposocorrencias.index');
     }
 }

@@ -157,6 +157,12 @@ return [
                     'icon' => 'fas fa-clipboard-list',
                     'route' => 'ocorrencias.index',
                 ],
+
+                [
+                    'text' => 'Tipos de Ocorrências',
+                    'icon' => 'fas fa-user-tie',
+                    'route' => 'tiposocorrencias.index',
+                ],
             ],
         ['header' => 'account_settings'],
         [
