@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="turmas_id">Tumas</label>
+                    <label class="mr-sm-2" for="turmas_id">Turmas</label>
                     <select required class="custom-select mr-sm-2" id="turmas_id" name="turmas_id">
                         <option selected disabled>Selecione</option>
                         @foreach($turmas as $turma)

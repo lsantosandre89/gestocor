@@ -24,7 +24,6 @@
                     <th>Matéria</th>
                     <th>Tipo Ocorrência</th>
                     <th>Usuário</th>
-                    <th>Descrição</th>
                     <th>Data Ocorrência</th>
                 </tr>
             </thead>
@@ -36,12 +35,15 @@
                     <td>{{$ocorrencia->materia->nome}}</td>
                     <td>{{$ocorrencia->tipo->descricao }}</td>
                     <td>{{$ocorrencia->usuario->name }}</td>
-                    <td>{{$ocorrencia->descricao}}</td>
                     <td>{{$ocorrencia->data}}</td>
                     <td>
-                        <a href="#" class="btn btn-warning"><i class="fas fa-fx fa-edit"></i></a>
-                        <a href="#" class="btn btn-info"><i class="fas fa-fx fa-eye"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fas fa-fx fa-trash-alt"></i></a>
+                        <a href="{{ route('ocorrencias.edit', $ocorrencia->id) }}" class="btn btn-warning"><i class="fas fa-fx fa-edit"></i></a>
+                        <a href="{{ route('ocorrencias.show', $ocorrencia->id) }}" class="btn btn-info"><i class="fas fa-fx fa-eye"></i></a>
+                        <form action="{{ route('ocorrencias.destroy', $ocorrencia->id) }}" method="POST" onsubmit="return confirm('Você tem certeza que deseja excluir este registro?');" style="display: inline-block;">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-danger"><i class="fas fa-fx fa-trash-alt"></i></button>
+                            </form>
                     </td>
                 </tr>
                 @endforeach

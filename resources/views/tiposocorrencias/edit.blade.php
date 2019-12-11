@@ -20,7 +20,7 @@
 
             <div class="form-group">
                 <label for="ra">Descrição</label>
-                <input required type="text" id="descricao" name="descricao" class="form-control" value="{{ $tipoocorrencia->descricao }}" placeholder="Ex.: Comportamental">
+                <input required type="text" id="descricao" name="descricao" class="form-control" value="{{ $tipoocorrencia->descricao }}" placeholder="Ex.: Disciplinar">
             </div>
 
             <div class="panel-footer">
