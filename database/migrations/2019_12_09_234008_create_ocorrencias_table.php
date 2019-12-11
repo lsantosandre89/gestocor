@@ -23,8 +23,6 @@ class CreateOcorrenciasTable extends Migration
             $table->foreign('tipos_id')->references('id')->on('tiposocorrencias');
             $table->unsignedInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');
-            $table->unsignedInteger('users_id');
-            $table->foreign('users_id')->references('id')->on('users');
             $table->string('descricao',50);
             $table->dateTime('data');
             $table->timestamps();
