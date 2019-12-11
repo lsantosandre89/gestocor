@@ -19,14 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('usuarios', 'UsuarioController');
+Route::resource('alunos', 'AlunoController');
+Route::resource('ocorrencias', 'OcorrenciaController');
+Route::resource('turmas', 'TurmaController');
+Route::resource('niveisacessos', 'NiveisAcessoController');
+Route::resource('tiposocorrencias', 'TipoOcorrenciaController');
+Route::resource('materias', 'MateriaController');

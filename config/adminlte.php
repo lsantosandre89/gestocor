@@ -134,64 +134,30 @@ return [
         ],
 
         [
-            'text'    => 'Cadastros',
-            'icon'    => 'fas fa-database',
-            'submenu' => [
-                [
-                    'text' => 'Usuários',
-                    'url'  => '/usuarios',
-                    'icon' => 'fas fa-user-tie',
-                    'route' => 'usuarios.index',
-                ],
-
-                [
                     'text' => 'Níveis de Acesso',
                     'icon' => 'far fa-id-badge',
-                    'url'  => '/acessos',
-                    'route' => 'acessos.index',
-                ],
+                    'route' => 'niveisacessos.index',
+                 ],
 
                 [
                     'text' => 'Turmas',
-                    'url'  => '/turmas',
                     'icon' => 'fas fa-bezier-curve',
                     'route' => 'turmas.index',
                 ],
 
                 [
                     'text' => 'Alunos',
-                    'url'  => '/alunos',
                     'icon' => 'fas fa-user-tie',
                     'route' => 'alunos.index',
                 ],
 
                 [
                     'text' => 'Ocorrências',
-                    'url'  => '/ocorrencias',
+                   // 'url'  => '/ocorrencias',
                     'icon' => 'fas fa-clipboard-list',
                     'route' => 'ocorrencias.index',
                 ],
-
             ],
-        ],
-        
-        [
-            'text'    => 'Relatórios',
-            'icon'    => 'fas fa-database',
-            'submenu' => [
-                [
-                    'text' => 'Ocorrências x Mês',
-                    'url'  => '/relocorrenciames',
-                    'icon' => 'fas fa-user-tie',
-                    'route' => 'relocorrenciames.index',
-                ],
-            ],
-        ],
-
-        
-      
-    ],
-        
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
@@ -203,7 +169,7 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        
+
 
 
     'filters' => [
