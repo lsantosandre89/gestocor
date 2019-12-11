@@ -21,6 +21,7 @@
             <thead>
                 <tr>
                     <th>Descricão</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
 

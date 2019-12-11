@@ -23,6 +23,7 @@
                     <th>Matricula</th>
                     <th>Nome</th>
                     <th>Turma</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
 
@@ -48,6 +49,7 @@
 
         </table>
     </div>
+    </div>
 
     @stop
 
@@ -60,8 +62,8 @@
         $(document).ready(function() {
             $('#table-alunos').DataTable({
                 language: {
-                    url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json",
-                },
+                    url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+                }
             });
         });
     </script>

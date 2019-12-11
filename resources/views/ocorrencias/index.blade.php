@@ -25,6 +25,7 @@
                     <th>Tipo Ocorrência</th>
                     <th>Usuário</th>
                     <th>Data Ocorrência</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
 
