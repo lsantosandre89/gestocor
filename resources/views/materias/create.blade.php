@@ -1,30 +1,30 @@
 @extends('adminlte::page')
 
-@section('title', 'Cadastro de Turmas')
+@section('title', 'Cadastro de Matérias')
 
 @section('content_header')
-<h1>Cadastro de Turmas</h1>
+<h1>Cadastro de Matérias</h1>
 @stop
 
 @section('content')
 
-<form action="{{ route('turmas.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('materias.store') }}" method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            Informe os dados da Turma.
+            Informe os dados da Matéria.
         </div>
 
         <div class="panel-body">
 
             <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <input required type="text" id="descricao" name="descricao" class="form-control" placeholder="Ex.: 1ª Série">
+                <label for="nome">Nome</label>
+                <input required type="text" id="nome" name="nome" class="form-control" placeholder="Ex.: Matemática">
             </div>
 
             <div class="panel-footer">
-                <a href="{{ route('turmas.index') }}" class="btn btn-default">Cancelar</a>
+                <a href="{{ route('materias.index') }}" class="btn btn-default">Cancelar</a>
                 <button type="submit" class="btn btn-success">Gravar</button>
 
             </div>

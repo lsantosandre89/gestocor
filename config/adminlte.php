@@ -134,9 +134,9 @@ return [
         ],
 
         [
-                    'text' => 'Níveis de Acesso',
+                    'text' => 'Matérias',
                     'icon' => 'far fa-id-badge',
-                    'route' => 'niveisacessos.index',
+                    'route' => 'materias.index',
                  ],
 
                 [
