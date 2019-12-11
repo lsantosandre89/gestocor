@@ -16,4 +16,6 @@
     ```php artisan migrate```
 
 5. [Entre no site](gestocor.test) e crie um usuário
-6. Execute o seguinte comando php artisan db:seed
+6. Execute o seguinte comando
+
+   ```php artisan db:seed```
